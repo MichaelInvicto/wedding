@@ -1,0 +1,26 @@
+.simple-carousel-example {
+    height: 70%;
+    width: 100%;
+}
+.card-pricing.popular {
+    z-index: 1;
+    border: 3px solid #007bff;
+}
+.card-pricing .list-unstyled li {
+    padding: .5rem 0;
+    color: #6c757d;
+}
+.logo-container {
+    width: 100%;
+    background-color: rgb(126, 125, 125);
+    border-radius: 10px;
+}
+.logo-container img {
+    width: 100%;
+}
+@media only screen and (min-width: 350px) and (max-width: 669px) {
+    .py-5 {
+        padding-bottom: 0 !important;
+        padding-top: 1.5rem !important;
+    }
+}
