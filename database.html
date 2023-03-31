@@ -1,0 +1,52 @@
+<html>
+    <body>
+        <button type="button" id="viewGuests">Click to view guests</button>
+        <div class="root"></div>
+    </body>
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+    <script>
+
+const firebaseConfig = {
+    apiKey: "AIzaSyA-yyQ1E02QguL7gxAkSQFGCVUzR-ixWHU",
+    authDomain: "wedding-95e32.firebaseapp.com",
+    projectId: "wedding-95e32",
+    storageBucket: "wedding-95e32.appspot.com",
+    messagingSenderId: "271043926784",
+    appId: "1:271043926784:web:e4524d0c61852c4e2131e5"
+  };
+
+firebase.initializeApp(firebaseConfig);
+
+var database = firebase.database();
+
+
+        // Viewing the guests on the database page
+
+    document.getElementById('viewGuests').addEventListener("click", function(event) {
+        view_guests()
+    })
+
+    function view_guests() {
+        var user_ref = database.ref('guests')
+        user_ref.on('value', function(snapshot) {
+            snapshot.forEach(function(element) {
+                document.querySelector('.root').innerHTML += `
+                    <br>
+                    <div>${"Name: " + element.val().name}</div>
+                    <div>${"Email:  " + element.val().email}</div>
+                    <div>${"Groom or Bride Side:  " + element.val().groomOrBrideSide}</div>
+                    <div>${"Dietary requirements:  " + element.val().diet}</div>
+                    <div>${"Message:  " + element.val().message}</div>
+                    <br>
+                    
+                `
+            })
+        
+    })
+
+}
+
+    </script>
+</html>
