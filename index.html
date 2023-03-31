@@ -132,7 +132,21 @@
                         <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 ml-md-3">
                             <h4 class="mb-2">The Beginning</h4>
                             <br>
-                            <p class="m-0">From being debate rivals 10 years ago, we have come a long way.</p>
+                            <p class="m-0">
+                                <br>
+                                <b>"WE SET SAIL THE BOAT OF OUR LOVE IN THE OCEAN OF LIFE"</b>
+                                <br>
+                                <br>
+                                To our dearest family and friends, we are thrilled to announce that our hearts have found their forever home.
+                                <br>
+                                <br>
+                                Through many travails, with love and charity, we have grown stronger.
+                                <br>
+                                <br>
+                                We are therefore overjoyed to announce our wedding. And we cannot wait to share this beautiful start with you all.
+
+
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -141,7 +155,24 @@
                         <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 mr-md-3">
                             <h4 class="mb-2">The Journey</h4>
                             <br>
-                            <p class="m-0">It has not been an easy ride but through law school, postgrad degrees and major career changes we have held strong.</p>
+                            <p class="m-0">
+                                Ours is a story of two people with a fondness for debate so you know it was a struggle not to make this too wordy. 😂 
+                                <br>
+                                <br>
+                                From our first meeting 9 years ago at KNUST to date, ours has been an evolution from intellectual adversaries, friends to partners. 
+                                <br>
+                                <br>
+                                When I first met David I never would have guessed that self-assured boy would become the passionate yet gentle, ambitious and selfless man I have found him to be. 
+                                <br>
+                                <br>
+                                For me, Eli has always been amazing. Beautiful, brilliant, and assertive, I saw in her a kindred spirit from the get go. Little did I know I would become more enamoured by her kindness, compassion and drive for excellence.
+                                <br>
+                                <br>
+                                If the surprises that growing together have brought are anything to go by. We look forward to every new day with excitement at the prospects for our happiness. 
+                                <br>
+                                <br>
+                                This is our love story.
+                            </p>
                         </div>
                     </div>
                     <div class="col-md-6 text-center text-md-left">
@@ -316,19 +347,20 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
+                    <div  class="alert" id='email-sent'></div>
                     <div class="text-center">
                         <form>
                             <div class="form-row">
                                 <div class="form-group col-sm-6">
-                                    <input type="text" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Your Name"/>
+                                    <input id="name" type="text" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Your Name"/>
                                 </div>
                                 <div class="form-group col-sm-6">
-                                    <input type="email" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Your Email"/>
+                                    <input id="email" type="email" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Your Email"/>
                                 </div>
                             </div>
                             <div class="form">
                                 <div class="form-group">
-                                    <select class="form-control bg-secondary border-0" style="height: 52px;">
+                                    <select id="groomOrBrideSide" class="form-control bg-secondary border-0" style="height: 52px;">
                                         <option>Groom Side or Bride Side</option>
                                         <option>Bride side</option>
                                         <option>Groom side</option>
@@ -336,10 +368,13 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control bg-secondary border-0 py-2 px-3" rows="5" placeholder="Leave a Short Message For The Couple" required="required"></textarea>
+                                <textarea id="diet" class="form-control bg-secondary border-0 py-2 px-3" rows="5" placeholder="Let us know if you have any dietary requirements" required="required"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" class="form-control bg-secondary border-0 py-2 px-3" rows="5" placeholder="Leave a Short Message For The Couple" required="required"></textarea>
                             </div>
                             <div>
-                                <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit">Submit</button>
+                                <button id="submit" class="btn btn-primary font-weight-bold py-3 px-5" type="submit">Submit</button>
                             </div>
                         </form>
                     </div>
@@ -380,8 +415,12 @@
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
 
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/database.js"></script>
 </body>
 
 </html>
