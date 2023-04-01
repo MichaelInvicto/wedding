@@ -22,6 +22,33 @@
 .logo-container img {
     width: 100%;
 }
+
+.index-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wedding-button {
+    width: 340px;
+    height: 53px;
+    border-radius: 11px;
+    border: 1px solid transparent;
+    transition: .2s;
+    background-color: green;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.wedding-button:hover {
+    border: 1px solid green;
+    background-color: transparent;
+    color: green;
+    transition: .2s;
+    cursor: pointer;
+}
+
 @media only screen and (min-width: 350px) and (max-width: 669px) {
     .py-5 {
         padding-bottom: 0 !important;
